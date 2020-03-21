@@ -11,6 +11,9 @@
   "description": "NativeScript Application",
   "license": "SEE LICENSE IN <your-license-filename>",
   "repository": "<fill-your-repository-here>",
+  "scripts": {
+    "start:ios": "tns run ios --device \"iPhone 11 Pro\""
+  },
   "dependencies": {
     "@angular/animations": "~8.2.0",
     "@angular/common": "~8.2.0",
