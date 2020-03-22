@@ -1,0 +1,23 @@
+<GridLayout columns="*" rows="100, *">
+  <Label row="0" col="0" class="header"></Label>
+
+  <ListView row="1" col="0" [items]="filteredItems" class="items">
+    <ng-template let-item="item">
+      <FlexboxLayout class="item" (tap)="selectItem(item)">
+        <FlexboxLayout class="imageCol">
+          <Image
+            [src]="'~/assets/images/flags/' + item.flag"
+            width="50"
+          ></Image>
+        </FlexboxLayout>
+        <FlexboxLayout flexDirection="column" class="descriptionCol">
+          <Label [text]="item.countryName"></Label>
+          <Label
+            [text]="'1 EUR = ' + item.euroEquivalentAmount + ' ' + item.code"
+            class="gray"
+          ></Label>
+        </FlexboxLayout>
+      </FlexboxLayout>
+    </ng-template>
+  </ListView>
+</GridLayout>

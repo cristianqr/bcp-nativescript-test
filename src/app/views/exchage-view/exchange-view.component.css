@@ -1,0 +1,63 @@
+.footer {
+  background-color: #57b3f9;
+  color: #ffffff;
+  text-align: center;
+  font-weight: bold;
+}
+
+.exchangeSummary {
+  text-align: center;
+  margin-top: 25;
+}
+
+TextField {
+  margin: 0;
+  border-width: 0;
+  font-weight: bold;
+}
+
+button {
+  background-color: #192232;
+  color: rgb(211, 210, 210);
+  margin: 0;
+  font-weight: bold;
+  text-align: left;
+}
+
+.changeGroup {
+  border-radius: 5;
+  border-width: 1;
+  border-color: rgb(187, 185, 185);
+}
+
+.changeGroup .item1 {
+  border-bottom-color: rgb(187, 185, 185);
+  border-bottom-width: 1;
+}
+
+.changeGroup label {
+  color: gray;
+}
+
+.item {
+}
+
+.originMoneyInput {
+  margin-bottom: 0;
+}
+
+.itemCol1 {
+  flex: 1;
+
+  padding-top: 5;
+  padding-left: 5;
+}
+
+.itemCol2 {
+  background-color: #192232;
+}
+
+.changeIcon {
+  horizontal-align: right;
+  margin-right: 10;
+}

@@ -1,0 +1,27 @@
+.items {
+  margin-left: 20;
+  margin-right: 20;
+}
+.imageCol {
+  padding-right: 20;
+  align-items: flex-start;
+}
+
+.descriptionCol {
+  border-bottom-width: 0.5;
+  border-bottom-color: rgb(209, 208, 208);
+  flex: 1;
+  padding-bottom: 20;
+}
+
+label {
+  padding: 0;
+}
+
+.gray {
+  color: gray;
+}
+
+ListView {
+  separator-color: white;
+}

@@ -1,0 +1,57 @@
+<GridLayout columns="*" rows="100, *, 50">
+  <Label row="0" col="0" class="header"></Label>
+  <FlexboxLayout flexDirection="column" row="1" col="0" justifyContent="center">
+    <GridLayout columns="*" rows="auto">
+      <FlexboxLayout col="0" row="0" flexDirection="column" class="changeGroup">
+        <FlexboxLayout class="item item1">
+          <FlexboxLayout flexDirection="column" class="itemCol1">
+            <Label text="Tú envías"></Label>
+            <FlexboxLayout flexDirection="column">
+              <TextField
+                keyboardType="number"
+                [(ngModel)]="originMoney.amount"
+                [text]="originMoney.amount"
+                (ngModelChange)="originAmountChange()"
+                class="originMoneyInput"
+              ></TextField>
+            </FlexboxLayout>
+          </FlexboxLayout>
+          <FlexboxLayout width="110" class="itemCol2">
+            <Button
+              [text]="originMoney.label"
+              (longPress)="longPressOrigin()"
+            ></Button>
+          </FlexboxLayout>
+        </FlexboxLayout>
+        <FlexboxLayout class="item">
+          <FlexboxLayout flexDirection="column" class="itemCol1">
+            <Label text="Tú recibes"></Label>
+            <TextField
+              keyboardType="number"
+              editable="false"
+              [text]="destinationAmount"
+            ></TextField>
+          </FlexboxLayout>
+          <FlexboxLayout width="110" class="itemCol2">
+            <Button
+              [text]="destinationMoney.label"
+              (longPress)="longPressDestination()"
+            ></Button>
+          </FlexboxLayout>
+        </FlexboxLayout>
+      </FlexboxLayout>
+      <Image
+        src="~/assets/images/refresh.png"
+        width="40"
+        class="changeIcon"
+        col="0"
+        row="0"
+        (tap)="changeMoney()"
+      ></Image>
+    </GridLayout>
+    <FlexboxLayout flexDirection="column">
+      <Label text="Compra: 3.55 | Venta: 3.70" class="exchangeSummary"></Label>
+    </FlexboxLayout>
+  </FlexboxLayout>
+  <Label text="Empieza tu operación" row="2" col="0" class="footer"> </Label>
+</GridLayout>
